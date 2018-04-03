@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Bussiness.Models.ShowModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewShows</title>
+</head>
+<body>
+    <div>Shows</div>
+    <table>
+        <thead>
+        <td>
+            Title
+        </td>
+
+        <td>
+            Day
+        </td>
+        <td></td>
+        </thead>
+        <tr></tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <div style="margin-right:80px">@item.Title</div>
+                </td>
+
+                <td>
+                    <div style="margin-right:80px"> @item.Day.ToShortDateString()</div>
+                </td>
+                <td>
+                    @Html.ActionLink("Go to show", "Details", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    @Html.ActionLink("Back to menu", "Index")
+</body>
+</html>

@@ -1,0 +1,135 @@
+﻿@model Bussiness.Models.ShowModel
+
+@{
+    Layout = null;
+    var error = TempData["error"];
+    if (error != null)
+    {
+        error = (string)error;
+    }
+    else
+    {
+        error = " ";
+    }
+
+    var errorEdit = TempData["errorEdit"];
+    if (error != null)
+    {
+        errorEdit = (string)errorEdit;
+    }
+    else
+    {
+        errorEdit = " ";
+    }
+
+    var remainingSeats = (int)TempData["remainingSeats"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div>
+        <h4>ShowModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Distribution)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Distribution)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Day)
+            </dt>
+
+            <dd>
+                @Model.Day.ToShortDateString()
+            </dd>
+
+            <dt>
+                Remaining seats
+            </dt>
+
+            <dd>
+                @remainingSeats
+            </dd>
+
+        </dl>
+    </div>
+    <div>
+        @if (remainingSeats != 0)
+        {
+            using (Html.BeginForm("SellTicket", "Cashier"))
+            {
+                <e style="color:red">@error</e><br />
+                <label>Row: </label><input name="row" type="text" /><br />
+                <label>Seat: </label><input name="seat" type="text" /><br />
+                <input name="showId" type="hidden" value="@Model.Id" />
+                <input type="submit" value="Create ticket" />
+            }
+        }
+        else
+        {
+            <h2 style="color:red"> Show sold out!</h2>
+        }
+    </div>
+
+    <h4>Sold tickets: @Model.Tickets.Count()</h4>
+    <div style="display:inline-block">
+        <table>
+            <thead>
+            <td style="width:50px">
+                Id
+            </td>
+            <td style="margin-left:20px">
+                Row
+            </td>
+            <td>
+                Seat
+            </td>
+
+            </thead>
+            @foreach (var ticket in Model.Tickets)
+            {
+                <tr>
+                    <td>@ticket.Id</td>
+                    <td>@ticket.Row</td>
+                    <td>@ticket.Seat</td>
+                    <td>@Html.ActionLink("Delete Ticket", "DeleteTicket", new { id = ticket.Id })</td>
+                </tr>
+            }
+        </table>
+        <div>
+            @using (Html.BeginForm("EditTicket", "Cashier"))
+            {
+                <e style="color:red">@errorEdit</e><br />
+                <Label>Ticket Id:<input name="id" type="text" /></Label><br />
+                <label>Row: </label><input name="row" type="text" /><br />
+                <label>Seat: </label><input name="seat" type="text" /><br />
+                <input name="showId" type="hidden" value="@Model.Id" />
+                <input type="submit" value="Edit ticket" />
+            }
+        </div>
+    </div>
+    <p>
+
+        @Html.ActionLink("Back to List", "ViewShows")
+    </p>
+</body>
+</html>

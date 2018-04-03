@@ -1,0 +1,29 @@
+﻿@model Bussiness.Models.UserModel
+@{
+    ViewBag.Title = "View";
+    Layout = null;
+}
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        @Html.Label("Username:")
+        <br />
+        @Html.TextBoxFor(m => m.Username)
+        <br />
+        <br />
+        @Html.Label("Password")
+        <br />
+        @Html.PasswordFor(m => m.PasswordHash)
+        <input type="submit" value="Login" />
+    }
+    @if (ViewData["error"] != null)
+    {
+        <span>@((string)ViewData["error"])</span>
+    }
+</body>
+</html>
+

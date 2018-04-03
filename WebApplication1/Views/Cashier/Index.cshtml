@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cashier</title>
+    <style>
+        div{
+            background-color:rgba(0,255,255,0.1);
+            text-decoration:none;
+            max-width:120px;
+        }
+    </style>
+</head>
+<body>
+    <span>
+        Logged in as cashier
+    </span>
+
+
+
+    <br />
+    <br />
+    @Html.ActionLink("View Shows", "ViewShows")
+    <br />
+    <br />
+    @Html.ActionLink("Log out", "Index", "Login")
+
+
+
+
+</body>
+</html>

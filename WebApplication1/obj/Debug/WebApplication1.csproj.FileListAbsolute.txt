@@ -1,0 +1,6 @@
+E:\Faculta\SD\projekt\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Faculta\SD\projekt\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Faculta\SD\projekt\WebApplication1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Faculta\SD\projekt\WebApplication1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Faculta\SD\projekt\WebApplication1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+E:\Faculta\SD\projekt\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe

@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <span>Logged in as admin</span><br/><br/>
+    <div>@Html.ActionLink("Manage cashiers","Cashiers") 
+    </div>
+    <div>
+        @Html.ActionLink("Manage shows","Shows")
+    </div>
+    <br/>
+    @Html.ActionLink("Log out","Index","Login")
+</body>
+</html>

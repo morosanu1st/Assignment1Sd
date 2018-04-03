@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Bussiness.Models.ShowModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Shows</title>
+    <style>
+        td > div {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "CreateShow")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                <div> @Html.DisplayNameFor(model => model.Title)</div>
+            </th>
+            <th>
+                <div>@Html.DisplayNameFor(model => model.Distribution)</div>
+            </th>
+            <th>
+                <div>
+                    @Html.DisplayNameFor(model => model.Day)
+                </div>
+            </th>
+            <th>
+                <div>
+                    @Html.DisplayNameFor(model => model.Seats)
+                </div>
+            </th>
+            <th>
+                <div>
+                    Sold Tickets
+                </div>
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <div>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        @Html.DisplayFor(modelItem => item.Distribution)
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        @item.Day.ToShortDateString()
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        @Html.DisplayFor(modelItem => item.Seats)
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        @item.Tickets.Count()
+
+                    </div>
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditShow", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "DeleteShow", new { id = item.Id })|
+                    @Html.ActionLink("Export tickets to csv", "Export", new { id = item.Id, extension = "csv" })|
+                    @Html.ActionLink("Export tickets to xml", "Export", new { id = item.Id, extension = "xml" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.ActionLink("Back to menu", "Index")
+
+</body>
+</html>
