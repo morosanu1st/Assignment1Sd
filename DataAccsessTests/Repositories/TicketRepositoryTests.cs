@@ -21,8 +21,14 @@ namespace DataAccsess.Repositories.Tests
             repo.InsertTicket(new DTO.Ticket { Row = 1, Seat = 2, ShowId = 1 });
             repo.InsertTicket(new DTO.Ticket { Row = 1, Seat = 2, ShowId = 2 });
 
-            Assert.AreEqual(repo.GetTicektsByShowId(1).Count(),2);
+            Assert.AreEqual(repo.GetTicektsByShowId(1).Count(), 2);
         }
 
+        [TestMethod()]
+        public void EmptyTableTest()
+        {
+            repo.EmptyTable();
+            Assert.AreEqual(repo.GetAllTickets().Count(), 0);
+        }
     }
 }

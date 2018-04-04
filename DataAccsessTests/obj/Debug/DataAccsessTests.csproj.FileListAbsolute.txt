@@ -1,0 +1,17 @@
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\DataAccsessTests.dll
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\DataAccsessTests.pdb
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\DataAccsess.dll
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\DataAccsess.pdb
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\DataAccsess.dll.config
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\obj\Debug\DataAccsessTests.csprojResolveAssemblyReference.cache
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\obj\Debug\DataAccsessTests.csproj.CoreCompileInputs.cache
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\obj\Debug\DataAccsessTests.csproj.CopyComplete
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\obj\Debug\DataAccsessTests.dll
+E:\Faculta\SD\projekt\WebApplication1\DataAccsessTests\obj\Debug\DataAccsessTests.pdb
